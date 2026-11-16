@@ -24,6 +24,16 @@ Read-only by design: no editor, no database, no upload system.
 - **Automatic navigation & search** — a build-time manifest and search index are generated from `content/`; add a file, and it appears.
 - **Two deployment targets, one codebase** — Cloudflare Pages Functions runtime or a dependency-free Node server, sharing one auth core.
 
+## Screenshots
+
+| Reading view (light) | Reading view (dark) |
+| --- | --- |
+| ![Ry-Mark reading view in light mode](docs/screenshots/document-light.png) | ![Ry-Mark reading view in dark mode](docs/screenshots/document-dark.png) |
+
+| Global search (`Ctrl K`) | Password sign-in |
+| --- | --- |
+| ![Global search palette](docs/screenshots/search.png) | ![Password sign-in screen](docs/screenshots/login.png) |
+
 ## Quick start (local development)
 
 Prerequisites: Node.js ≥ 20.
