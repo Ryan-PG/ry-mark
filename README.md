@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/brand/logo-wordmark.svg" alt="Ry-Mark" width="360" />
+</p>
+
 # Ry-Mark
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)

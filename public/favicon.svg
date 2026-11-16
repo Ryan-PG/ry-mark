@@ -1,4 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Ry-Mark brand mark: an "R" whose leg ends in a down-right arrow (read on). -->
   <rect x="4" y="4" width="56" height="56" rx="14" fill="#4f46e5"/>
-  <path d="M18 44V20h6l10 14V20h6v24h-6L24 30v14h-6z" fill="#ffffff"/>
+  <g fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 17v32"/>
+    <path d="M22 17h7a9.5 9.5 0 0 1 0 19h-7"/>
+    <path d="M30.5 36l11 11"/>
+    <path d="M33.5 47h8v-8"/>
+  </g>
 </svg>

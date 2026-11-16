@@ -4,6 +4,11 @@ Status of the Ry-Mark implementation. Updated whenever a meaningful task complet
 
 **Status at last update: complete and verified.** Typecheck clean (app/worker/server), 90/90 tests passing (6 suites), production build succeeds, both deployment adapters verified end-to-end in a real browser / real server.
 
+## Post-1.0.0 updates
+
+### Branding
+- [x] New logo designed and shipped: mark = rounded indigo tile with an "R" whose leg ends in a down-right arrow ("read on" — nod to Markdown). Assets in `docs/brand/` (`logo-mark.svg`, `logo-wordmark.svg`, `logo-wordmark-dark.svg`); `public/favicon.svg` replaced; README header uses the light wordmark; in-app `BrandMark` redrawn as inline token-driven SVG (CSP-safe). Rendered output visually verified at 16/24/32/48/128 px on light and dark backgrounds in a real browser.
+
 ## Completed
 
 ### Phase 1 — Inspection & research

@@ -2,6 +2,14 @@
 
 All notable changes to Ry-Mark.
 
+## Unreleased
+
+### Added
+- Brand assets: new logo mark (an "R" whose leg ends in a down-right arrow — "read on") in `docs/brand/` (`logo-mark.svg`, `logo-wordmark.svg`, `logo-wordmark-dark.svg`), used as the new `public/favicon.svg` and in the README header.
+
+### Changed
+- In-app `BrandMark` (sidebar, header, loading state, login screen) redrawn to match the new logo, still inline SVG with design tokens (CSP-safe).
+
 ## 1.0.0 — Initial release
 
 ### Added

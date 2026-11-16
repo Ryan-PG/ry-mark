@@ -94,7 +94,18 @@ export function BrandMark({ className = "size-6" }: { className?: string }): Rea
   return (
     <svg viewBox="0 0 64 64" className={cn("shrink-0", className)} aria-hidden="true">
       <rect x="4" y="4" width="56" height="56" rx="14" fill="var(--primary)" />
-      <path d="M18 44V20h6l10 14V20h6v24h-6L24 30v14h-6z" fill="var(--primary-foreground)" />
+      <g
+        fill="none"
+        stroke="var(--primary-foreground)"
+        strokeWidth="7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M22 17v32" />
+        <path d="M22 17h7a9.5 9.5 0 0 1 0 19h-7" />
+        <path d="M30.5 36l11 11" />
+        <path d="M33.5 47h8v-8" />
+      </g>
     </svg>
   );
 }
