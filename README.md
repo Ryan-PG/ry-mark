@@ -1,5 +1,12 @@
 # Ry-Mark
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![Node](https://img.shields.io/badge/node-%E2%89%A520-brightgreen)](./package.json)
+[![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=white)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Cloudflare Pages](https://img.shields.io/badge/deploy-Cloudflare%20Pages-F38020?logo=cloudflare&logoColor=white)](./docs/DEPLOYMENT.md)
+[![Docker](https://img.shields.io/badge/self--host-Docker-2496ED?logo=docker&logoColor=white)](./docs/SELF-HOSTING.md)
+
 A polished, password-protected **Markdown & HTML documentation viewer**. It reads documents from a `content/` directory, generates navigation and search automatically, and deploys either to **Cloudflare Pages** or **self-hosted via Node.js / Docker** — with identical behavior.
 
 Read-only by design: no editor, no database, no upload system.
@@ -98,4 +105,4 @@ Navigation, breadcrumbs, search and the table of contents update automatically o
 
 ## License
 
-MIT
+This project is licensed under the [MIT License](./LICENSE).
