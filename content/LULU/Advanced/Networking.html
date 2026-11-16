@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Networking Reference</title>
+    <style>
+      body { font-family: Georgia, serif; max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.5rem; line-height: 1.7; color: #26272b; }
+      h1 { font-family: system-ui, sans-serif; }
+      .topology { background: #f1f5f9; border-radius: 12px; padding: 1.25rem 1.5rem; font-family: ui-monospace, monospace; font-size: 0.85rem; }
+      a { color: #4338ca; }
+    </style>
+  </head>
+  <body>
+    <h1>Networking Reference</h1>
+    <p>
+      A standalone HTML document with its own typography. It demonstrates that
+      HTML files keep their original look — completely different from the app's design system.
+    </p>
+    <div class="topology">
+      client ── HTTPS ──▶ reverse proxy ──▶ rymark:8080
+                          │                     │
+                          │                     ├─ /healthz        (public)
+                          │                     ├─ /api/auth/*     (rate limited)
+                          │                     └─ /content/*      (auth gate)
+    </div>
+    <p>
+      Everything under <strong>/content/</strong> is denied to unauthenticated callers,
+      including direct URLs, images and the search index.
+    </p>
+  </body>
+</html>

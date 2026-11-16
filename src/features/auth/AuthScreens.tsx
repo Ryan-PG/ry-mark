@@ -154,7 +154,10 @@ export function SetupScreen({ variant }: { variant: "unconfigured" | "malformed"
           <li>
             <span className="font-medium">6. Create another encrypted Secret named</span>{" "}
             <code className="kbd">SESSION_SECRET</code>
-            <span className="font-medium"> (a long random value, min 32 characters).</span>
+            <span className="font-medium"> (a long random value, min 32 characters), generated for example with:</span>
+            <code className="kbd mt-1 block w-fit break-all">
+              node -e "console.log(require('node:crypto').randomBytes(48).toString('base64'))"
+            </code>
           </li>
           <li>
             <span className="font-medium">7. Save and redeploy if required.</span>
@@ -165,7 +168,10 @@ export function SetupScreen({ variant }: { variant: "unconfigured" | "malformed"
         </ol>
       ) : (
         <p className="mt-5 rounded-lg bg-muted/60 p-4 text-sm leading-relaxed">
-          Generate a long random value (for example with <code className="kbd">openssl rand -base64 48</code>)
+          Generate a long random value (≥ 32 characters), for example with:
+          <code className="kbd mt-2 block w-fit break-all">
+            node -e "console.log(require('node:crypto').randomBytes(48).toString('base64'))"
+          </code>
           and store it as an encrypted secret named <code className="kbd">SESSION_SECRET</code> in
           your deployment environment. See{" "}
           <span className="font-mono text-xs">docs/PASSWORD-SETUP.md</span> for details.

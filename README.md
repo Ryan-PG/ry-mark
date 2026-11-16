@@ -40,7 +40,11 @@ npm test           # unit + rendering tests
 2. Build settings: framework **Vite**, build command `npm run build`, output directory `dist`, production branch `main`.
 3. Set two encrypted Secrets (Settings → Variables and Secrets → type *Secret*):
    - `PASSWORD_HASH` — output of `npm run hash:password`
-   - `SESSION_SECRET` — a long random value (≥ 32 chars)
+   - `SESSION_SECRET` — a long random value (≥ 32 chars). Generate it on any platform:
+
+     ```bash
+     node -e "console.log(require('node:crypto').randomBytes(48).toString('base64'))"
+     ```
 4. Optional plain variables: `AUTH_ENABLED` (`false` disables auth), `SESSION_TTL_HOURS`.
 5. Deploy. Direct content URLs, images, the manifest and the search index are all protected — see `docs/AUTHENTICATION.md`.
 

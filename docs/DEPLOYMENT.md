@@ -20,7 +20,8 @@
 
 3. **Set the secrets** before the first login attempt (Settings → Variables and Secrets):
    - `PASSWORD_HASH` (type: Secret) — output of `npm run hash:password`
-   - `SESSION_SECRET` (type: Secret) — long random value, ≥ 32 chars
+   - `SESSION_SECRET` (type: Secret) — long random value, ≥ 32 chars. Generate on any platform:
+     `node -e "console.log(require('node:crypto').randomBytes(48).toString('base64'))"`
    - Optional plain variables: `AUTH_ENABLED` (`true`/`false`), `SESSION_TTL_HOURS`
 
 4. **Deploy.** Every push to `main` deploys production; pushes to other branches create preview deployments.

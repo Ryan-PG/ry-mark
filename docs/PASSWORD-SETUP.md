@@ -24,7 +24,13 @@ pbkdf2-sha256$100000$Xk9…$Bq3…
 1. Open your project in the Cloudflare dashboard.
 2. **Settings → Variables and Secrets**.
 3. Add a **Secret** (type “Secret”, not “Text”) named `PASSWORD_HASH` — paste the generated hash.
-4. Add another **Secret** named `SESSION_SECRET` — a long random value (≥ 32 characters), e.g. from `openssl rand -base64 48`.
+4. Add another **Secret** named `SESSION_SECRET` — a long random value (≥ 32 characters). Generate it on any platform:
+
+   ```bash
+   node -e "console.log(require('node:crypto').randomBytes(48).toString('base64'))"
+   ```
+
+   (or `openssl rand -base64 48` on Linux/macOS).
 5. Optional plain **variables**: `AUTH_ENABLED` (default `true`), `SESSION_TTL_HOURS` (default `168`).
 6. Redeploy if the dashboard asks, then refresh the app.
 
@@ -40,7 +46,7 @@ npx wrangler pages secret put SESSION_SECRET
 ```bash
 cp .env.example .env
 npm run hash:password            # paste the hash into PASSWORD_HASH
-openssl rand -base64 48          # paste into SESSION_SECRET
+node -e "console.log(require('node:crypto').randomBytes(48).toString('base64'))"   # paste into SESSION_SECRET
 ```
 
 The `.env` file is git-ignored. In Docker Compose the container reads `.env` via `env_file`. For bare Node: `npm run start` reads the same `.env` from the project root.

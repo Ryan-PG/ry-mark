@@ -15,6 +15,12 @@ cp .env.example .env       # fill PASSWORD_HASH + SESSION_SECRET
 docker compose up -d --build
 ```
 
+Generate `SESSION_SECRET` on any platform (≥ 32 characters):
+
+```bash
+node -e "console.log(require('node:crypto').randomBytes(48).toString('base64'))"
+```
+
 - App: `http://localhost:8080`
 - Health check: `GET /healthz` (built into the image's HEALTHCHECK)
 - The image is multi-stage (build → runtime), runs as a non-root user, and carries no `node_modules`.

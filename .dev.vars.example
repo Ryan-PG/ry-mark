@@ -5,7 +5,9 @@
 # middleware) — it is never deployed.
 #
 # Generate PASSWORD_HASH with:  npm run hash:password
+# Generate SESSION_SECRET on any platform with:
+#   node -e "console.log(require('node:crypto').randomBytes(48).toString('base64'))"
 
 AUTH_ENABLED=true
-PASSWORD_HASH=
-SESSION_SECRET=dev-only-session-secret-please-change-me-1234567890
+PASSWORD_HASH=pbkdf2-sha256$100000$JGInvnaWlP8fcOxZ5nCX4g$-7FcXmn1k0RYXXgHnvMxCPiLUSC40pnoDPN2ENnClN0
+SESSION_SECRET=pK3W/248vWYZMYkaoFDdUsppOiWfyPInfLD/S/+hMAG7rjQyvP1H83DxUWkbWvOo
