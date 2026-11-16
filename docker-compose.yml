@@ -1,0 +1,19 @@
+services:
+  rymark:
+    build: .
+    image: rymark:latest
+    container_name: rymark
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      # Ensure sane defaults inside the container; override in .env.
+      NODE_ENV: production
+      PORT: "8080"
+    volumes: []
+      # Ry-Mark is stateless (no database) — nothing needs persisting.
+      # To serve custom content, mount your own docs over the content dir:
+      # - ./content:/app/dist/content:ro
+

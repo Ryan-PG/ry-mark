@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Schema Reference</title>
+    <style>
+      body { font-family: ui-monospace, monospace; padding: 2rem; background: #0f172a; color: #e2e8f0; }
+      table { border-collapse: collapse; margin-top: 1rem; }
+      th, td { border: 1px solid #334155; padding: 0.45rem 0.8rem; text-align: left; }
+      th { background: #1e293b; color: #a5b4fc; }
+      h1 { font-size: 1.2rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Configuration "schema"</h1>
+    <p>Ry-Mark has no database — this reference documents the environment contract instead.</p>
+    <table>
+      <thead>
+        <tr><th>Variable</th><th>Type</th><th>Required</th><th>Meaning</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>AUTH_ENABLED</td><td>"true" | "false"</td><td>optional</td><td>Fail-closed default: enabled</td></tr>
+        <tr><td>PASSWORD_HASH</td><td>pbkdf2-sha256$…</td><td>when auth on</td><td>Output of npm run hash:password</td></tr>
+        <tr><td>SESSION_SECRET</td><td>string ≥ 32 chars</td><td>when auth on</td><td>HMAC key for session cookies</td></tr>
+        <tr><td>SESSION_TTL_HOURS</td><td>number</td><td>optional</td><td>Session lifetime (default 168)</td></tr>
+        <tr><td>PORT / HOST</td><td>number / string</td><td>self-hosted only</td><td>Server bind address</td></tr>
+      </tbody>
+    </table>
+  </body>
+</html>

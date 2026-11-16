@@ -1,0 +1,15 @@
+name = "ry-mark"
+compatibility_date = "2025-06-01"
+pages_build_output_dir = "dist"
+
+# Cloudflare Pages Secrets (PASSWORD_HASH, SESSION_SECRET) are NOT defined
+# here. Configure them as encrypted secrets via the dashboard
+# (Settings > Variables and Secrets) or:
+#
+#   npx wrangler pages secret put PASSWORD_HASH
+#   npx wrangler pages secret put SESSION_SECRET
+#
+# Plain-text variables (safe to define here or in the dashboard):
+# [vars]
+# AUTH_ENABLED = "true"
+# SESSION_TTL_HOURS = "168"

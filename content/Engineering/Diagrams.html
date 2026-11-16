@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>System Diagrams</title>
+    <style>
+      /* Self-contained styles: relative asset paths and inline CSS are preserved. */
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f8fafc;
+        color: #1e293b;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 1.25rem;
+        max-width: 640px;
+        margin: 0 auto 1rem;
+      }
+      h1 { font-size: 1.3rem; margin: 0 0 0.5rem; }
+      button {
+        border: 1px solid #e2e8f0;
+        background: #eef2ff;
+        color: #4338ca;
+        border-radius: 8px;
+        padding: 0.4rem 0.9rem;
+        cursor: pointer;
+        font-size: 0.85rem;
+      }
+      #counter { font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>System Diagrams</h1>
+      <p>
+        This is a real HTML document rendered inside an isolated iframe. Its styles,
+        markup and scripts are untouched — the app does not parse it as Markdown.
+      </p>
+      <p>
+        Interactive check: clicks executed <span id="counter">0</span> times.
+        <button id="increment" type="button">Run JavaScript</button>
+      </p>
+    </div>
+    <script>
+      // Plain JS runs inside the sandbox (allow-scripts only — no same-origin access).
+      let count = 0;
+      document.getElementById("increment").addEventListener("click", function () {
+        count += 1;
+        document.getElementById("counter").textContent = String(count);
+      });
+    </script>
+  </body>
+</html>

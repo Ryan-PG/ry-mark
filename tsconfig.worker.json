@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "types": [],
+    "paths": {
+      "@rymark/auth-core/*": ["./shared/auth-core/*"]
+    }
+  },
+  "include": ["worker/**/*.ts", "worker/**/*.d.ts", "shared/**/*.ts"]
+}

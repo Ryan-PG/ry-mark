@@ -1,0 +1,11 @@
+# Ry-Mark local development secrets (Wrangler + vite dev/preview middleware).
+#
+# Copy this file to .dev.vars and fill in the values. NEVER commit .dev.vars.
+# This file is ONLY read by local tooling (wrangler pages dev, the vite dev
+# middleware) — it is never deployed.
+#
+# Generate PASSWORD_HASH with:  npm run hash:password
+
+AUTH_ENABLED=true
+PASSWORD_HASH=
+SESSION_SECRET=dev-only-session-secret-please-change-me-1234567890
